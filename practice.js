@@ -6,6 +6,10 @@
   You can refresh the page at any time to re-run all the tests.
 */
 
+
+
+
+
 /// ////////////// PROBLEM 1 ///////////////////
 
 /*
@@ -13,6 +17,16 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age.
   Then alert your name using dot notation.
 */
+
+const me = {
+
+  name: `Munkhbold`,
+  age: 36
+}
+
+alert(me.name)
+
+
 
 //Code here
 
@@ -23,21 +37,40 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+const favoriteThings = {
+  band: `Coldplay`,
+  food: `Pizza`,
+  person: `Munkhbold`,
+  book: `Game of thrones`,
+  movie: `The last samurai`,
+  holiday: `Chirstmas day`
+  }
+
+
+  // alert(favoriteThings.book + ` ` + favoriteThings.holiday)
+
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
 
-//Code here
+favoriteThings.car = `lexus600`
+
+favoriteThings.brand = `Toyota`
+
+
+
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
-//Code here
+favoriteThings.book =`Harry Potter`
+favoriteThings.food =`Chicken Nuggets`
+
+
 
 /// ////////////// PROBLEM 3 ///////////////////
 
@@ -48,8 +81,16 @@ const user2 = {
   pwHash: 'U+Ldlngx2BYQk',
   email: 'BryanSmith33@gmail.com',
   birthday: '05/02/1990',
-  username: 'bryansmith33',
+  username: 'bryansmith33'
 };
+
+user2.name = `Bryan G. Smith`
+user2.email = `bryan.smith@devmounta.in`
+
+
+
+
+
 // Do not edit the code above.
 
 /*
@@ -69,7 +110,9 @@ let shoppingCart = {};
   It should add a new key-value pair to the cart with the item and quantity.
 */
 
-//Code Here
+function addToCart(item, quantity) {
+shoppingCart[item] =quantity
+}
 
 /// ////////////// PROBLEM 5 ///////////////////
 
@@ -79,7 +122,14 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(object){
+  for(let property in object){
+    if(object[property] > 10){
+    object[property] = 0
+    }
+  }
+  return object
+}
 
 /// ////////////// PROBLEM 6 ///////////////////
 
@@ -89,7 +139,12 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function double(object){
+  for(let property in object){
+    object[property] *= 2
+  }
+  return object
+}
 
 /// ////////////// PROBLEM 7 ///////////////////
 
@@ -98,7 +153,11 @@ let shoppingCart = {};
 */
 
 function showValues(obj) {
-  //Code Here
+  let string = ''
+  for(let prop in obj){
+    string += obj[prop]
+      }
+      return string
 }
 
 /// ////////////// PROBLEM 8 ///////////////////
@@ -109,7 +168,15 @@ function showValues(obj) {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode){
+  let object = {
+    cardNumber : cardNumber,
+    expirationDate : expirationDate,
+    securityCode : securityCode
+  }
+
+  return object
+}
 
 /// ////////////// PROBLEM 9 ///////////////////
 
@@ -118,7 +185,13 @@ function showValues(obj) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(object){
+  delete object.password
+
+  return object
+}
+
+
 
 /// ////////////// PROBLEM 10 ///////////////////
 
@@ -129,13 +202,19 @@ const deleteTheBigNumbers = {
   third: 110,
   fourth: 200,
 };
+
+
 // Do not edit the code above.
 
 /*
   Write a for...in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for(let prop in deleteTheBigNumbers){
+  if (deleteTheBigNumbers[prop] > 100){
+    delete deleteTheBigNumbers[prop] 
+  }
+}
 
 /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
@@ -160,7 +239,7 @@ const carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-//Code Here
+const {color, make, model, year} = carDetails
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -171,6 +250,7 @@ const carDetails = {
 */
 
 function greeting(obj) {
+  const {firstName, lastName, title} = obj
   //Code Here
 
   // Do not edit the code below.
@@ -188,7 +268,12 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(object){
+const {utah, california, texas, arizona} = object
+
+return utah + california +texas + arizona
+}
+
 
 /// ////////////// PROBLEM 14 ///////////////////
 
@@ -200,7 +285,14 @@ function greeting(obj) {
   Return false otherwise.
 */
 
-//Code Here
+function usCanadaBorder(array){
+  const[latitude, longitude] = array
+  if(latitude === 49 && longitude >= -123 && longitude <= -95){
+    return true
+  } else {
+    return false
+  }
+}
 
 /// ////////////// PROBLEM 15 ///////////////////
 
@@ -246,7 +338,11 @@ const employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater(){
+  for(let i = 0; i < employees.length; i++){
+    if 
+  }
+}
 
 /// ////////////// PROBLEM 16 ///////////////////
 
